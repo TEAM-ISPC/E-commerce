@@ -1,5 +1,3 @@
-•
-
 <p align="center">
   <img width="400" alt= "logo del proyecto TurNow" src=https://user-images.githubusercontent.com/96992783/232926965-98cc1b9a-2bee-419c-b618-ffb7c16601fe.png>
 </p>
