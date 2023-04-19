@@ -17,7 +17,7 @@
   <li><a href="https://github.com/memaluna">Emanuel Luna</a>
   <li><a href="https://github.com/LucasJuarez3416">Lucas Juárez</a>
   <li><a href="https://github.com/solefanjbj">Maria Soledad Caro</a>
-  <li><a href=""></a>
+  <li><a href="https://github.com/juanpisoni">Juan Pisoni</a>
   <li><a href=""></a>
   <li><a href=""></a>
   <li><a href=""></a>
