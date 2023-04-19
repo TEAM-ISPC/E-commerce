@@ -14,7 +14,7 @@
   <summary><H3>Integrantes:</H3></summary>
   <ul>
   <li><a href="https://github.com/GiulianaDeEt">Giuliana Dealbera Etchechoury</a></li>
-  <li><a href=""></a>
+  <li><a href="https://github.com/memaluna">Emanuel Luna</a>
   <li><a href=""></a>
   <li><a href=""></a>
   <li><a href=""></a>
