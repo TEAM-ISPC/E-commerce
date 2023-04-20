@@ -1,0 +1,9 @@
+-Este controlador sera la paguina principal en donde se mostrara el enlace para realizar el login ya sea por parte del emprendedor como de quien consume el servicio.
+-El login que se mostraria en forma de popup tendria dos opciones: 
+1- Realizar el login de quien consume los servicios que se publiquen 
+2- Publicar los servicios para ser consumidos. 
+-Esta interaccion generara un consumo de la base de datos , ya que si es un usuario nuevo se debera crear un cliente o emprendimiento. En caso de estasr creado
+se solicitara una peticion a la base de datos para que devuelva la informacion del cliente. En cualquiera de los dos casos quedaria una sesion abierta para que 
+quede un registro de sus acciones en la paguina. 
+-Tendra un section en donde se mostratan las catergorias de los servicios que se prestan. dichas categorias deberan consumirse de la base de datos ,ydevolver
+al usuario informacion del servicio que se brinda (tiempos, costos , disponibilidad, entre otros)
