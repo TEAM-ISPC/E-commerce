@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>TurNow</title>
+
+      <!-- Bootstrap CSS -->
+      <!-- CSS only -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+      <!-- CSS nuestro -->
+      <link rel="stylesheet" href="css/estilos.css">
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+      <!-- FONTAWSOME!!! -->
+      <script src="https://kit.fontawesome.com/a12e544d24.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            
+              <a href="#"><img src="./img/iconoLogotipo.png" class="logo"></a>
+            
+            <div class="d-flex justify-content-end">
+                <a href="paginaEnConstruccion.html"><img src="./img/qrIcono.jpeg" alt=""class="iconoCliente" ></a>
+            
+                <a href="#"><img src="./img/logoUsuario.jpeg" alt=""class="iconoCliente" data-bs-toggle="modal" data-bs-target="#loginModal"></a>
+            </div>
+         </div>
+    </header>
+
+    <div class="container">
+      
+            <!-- tienda seleccionada -->
+            <div class="justify-content-around">
+              <a href=""><img src="img/icono_peluqueriaRosa.png" width="100px" alt="" class="tiendas img-fluid"></a><br>
+              <h5 class="text-center"> Peluquerías </h5>
+            </div>
+            
+            <!-- Modal pregunta login -->
+            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    
+                      
+                    
+                      <div class="d-grid gap-2 col-6 mx-auto">
+                        <!-- Botón Soy cliente-->
+                        <button onclick="window.location.href='perfilCliente.html'"class="btn boton" type="button">Soy Cliente</button>
+
+                        <!-- Botón Soy Emprendedor-->
+                        <button onclick="window.location.href='perfilEmprendimiento.html'"class="btn boton" type="button">Soy Emprendedor</button>
+                      </div>
+                    <br>
+                    <div class="modal-footer justify-content-center">
+                      <div class="d-grid gap-2 text-center"> 
+                        <a href="#" class="text-center" data-bs-toggle="modal" data-bs-target="#registroModal">No tengo cuenta</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal registro -->
+          <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <form>
+                    <img src="img/iconoLogotipo.png" width="50px" alt="logoTurNow" class="container">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Nombre de usuario:</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Contraseña:</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Repetir Contraseña:</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Correo Electrónico:</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">¿Registrar como Cliente o Emprendedor?:</label>
+                      <select class="form-select" aria-label="Default select example">
+                        <option value="1">Cliente</option>
+                        <option value="2">Emprendedor</option>
+                      </select>
+                    </div>
+                    <div id="emailHelp" class="form-text">Tranqui, no vamos a compartir tus datos con nadie. Salvo que nos den mucha plata!.</div>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                      <button type="submit" class="btn boton btn-block">Registrar</button>
+                      <button data-bs-dismiss="modal" class="btn boton"> Cancelar</button>
+                    </div>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+   
+
+        <div class="container justify-content-around">
+            <!-- Section de tiendas -->
+            <div class="row">
+            
+                <!-- fila1 -->
+              
+                <div class="container d-flex justify-content-between">
+                  <div>
+                    <a href="turnosDisponibles.html"><img src="img/iconoEmprendimiento1.png" width="100px" alt="" class="tiendas img-fluid"></a><br>
+                  <h5 class="text-center"> Peluquería A </h5>
+                  </div>
+                  
+                  <div>
+                    <a href=""><img src="img/iconoEmprendimiento2.png" width="100px" alt="" class="tiendas img-fluid"></a><br>
+                    <h5 class="text-center"> Peluquería B </h5>
+                  </div>
+                  
+                  <div>
+                    <a href=""><img src="img/iconoEmprendimiento3.png" width="100px" alt="" class="tiendas img-fluid"></a><br>
+                    <h5 class="text-center"> Peluquería C </h5>
+                  </div>
+                </div>
+              
+                <!-- fila2 -->
+                <div class="container d-flex justify-content-around">
+                  <div>
+                    <a href=""><img src="img/iconoRedondo.png" width="100px" alt="" class="tiendas img-fluid"></a><br>
+                    <h5 class="text-center"> Otra Peluquería </h5>
+                  </div>
+                  <div>
+                    <a href=""><img src="img/iconoRedondo.png" width="100px" alt="" class="tiendas img-fluid"></a><br>
+                    <h5 class="text-center " > Otra Peluquería </h5>
+                  </div>
+                  
+                </div>
+            </div>
+          </div>   
+           
+   
+       
+    
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+ <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
