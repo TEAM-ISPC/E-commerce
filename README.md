@@ -20,7 +20,8 @@
   <li><a href="https://github.com/juanpisoni">Juan Pisoni</a>
   <li><a href="https://github.com/exequiel2k">Exequiel Diaz</a>
   <li><a href="https://github.com/agustinrios263">Agustin Rios</a>
-  <li><a href=""></a>
+  <li><a href=""></a>https://github.com/vittoria06/marina victoria sanchez</a>
+ 
   <li><a href=""></a>
   </ul>
   </details>
