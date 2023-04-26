@@ -49,6 +49,6 @@ CREATE TABLE IF NOT EXISTS Usuario (
         clave varchar(50),
         telefono varchar(50),
         estado tinyint(1),
-		PRIMARY KEY(idUsuario),
+	PRIMARY KEY(idUsuario),
         FOREIGN KEY (rolId) REFERENCES rol(idRol)
         );
