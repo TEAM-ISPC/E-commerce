@@ -8,6 +8,30 @@ CREATE TABLE IF NOT EXISTS Categoria(
         estado tinyint(1),
         PRIMARY KEY (IdCategoria)
         );
+	
+CREATE TABLE IF NOT EXISTS Articulo(
+        idArticulo int(11) NOT NULL AUTO_INCREMENT,
+        idCategoria int(11),
+        codigo varchar(50),
+        nombre varchar(100),
+        stock int(11),
+        imagen varchar(20),
+        estado tinyint(1),
+        PRIMARY KEY (idArticulo), 
+        FOREIGN KEY(idCategoria) REFERENCES Categoria(idCategoria)
+        );
+
+CREATE TABLE IF NOT EXISTS Persona(
+        idPersona int(11) NOT NULL AUTO_INCREMENT,
+        tipo_Persona varchar(20),
+        nombre varchar(100),
+        tipo_documento varchar(20),
+        num_documento varchar(20),
+        direccion varchar(50),
+        telefono varchar(20)
+        email varchar(50)
+        PRIMARY KEY (idPersona)
+        );
 
 CREATE TABLE IF NOT EXISTS rol(
         idRol int(11) NOT NULL AUTO_INCREMENT,
