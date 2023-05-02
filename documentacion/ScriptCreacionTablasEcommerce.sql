@@ -78,3 +78,20 @@ CREATE TABLE IF NOT EXISTS Detalle_Ingreso (
         FOREIGN KEY (ingresoId) REFERENCES Ingreso(idIngreso)
         FOREIGN KEY (articuloId) REFERENCES Articulo(idArticulo)
         );
+
+CREATE TABLE IF NOT EXISTS Venta (
+        idVenta int(11) NOT NULL AUTO_INCREMENT,
+        clienteId int(11),
+        usuarioId int(11),
+        tipo_comprobante varchar(20),
+        serie_comprobante varchar(7),
+        num_comprobate varchar(10),
+        fehca datetime,
+        impuesto int(11),
+        total int(11),
+        estado tinyint(1),
+	PRIMARY KEY(idVenta),
+        FOREIGN KEY (clienteId) REFERENCES Ingreso(idPersona)
+        FOREIGN KEY (usuarioId) REFERENCES Articulo(idUsuario)
+        );
+
