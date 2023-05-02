@@ -95,3 +95,14 @@ CREATE TABLE IF NOT EXISTS Venta (
         FOREIGN KEY (usuarioId) REFERENCES Articulo(idUsuario)
         );
 
+CREATE TABLE IF NOT EXISTS Detalle_Venta (
+        idDetalleVenta int(11) NOT NULL AUTO_INCREMENT,
+        ventaId int(11),
+        articuloId int(11),
+        cantidad int(11),
+        precio int(11),
+        descuento int(11),
+	PRIMARY KEY(idDetalleVenta),
+        FOREIGN KEY (ventaId) REFERENCES Ingreso(idVenta)
+        FOREIGN KEY (articuloId) REFERENCES Articulo(idArticulo)
+        );
