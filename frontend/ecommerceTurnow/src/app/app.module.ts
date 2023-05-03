@@ -17,7 +17,7 @@ const appRoutes: Routes = [
   { path:'', component:TiendaComponent },
   { path:'item', component:ItemTiendaComponent },
   { path:'login', component:LoginComponent },
-  { path:'carrito', component:CarritoComponent }
+  { path:'carrito', component:CarritoComponent },
   
 ];
 
