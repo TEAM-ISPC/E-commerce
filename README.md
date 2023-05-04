@@ -14,13 +14,13 @@
   <summary><H3>Integrantes:</H3></summary>
   <ul>
   <li><a href="https://github.com/agustinrios263">Agustin Rios</a>
-  <li><a href="https://github.com/memaluna">Emanuel Luna</a>
-  <li><a href="https://github.com/exequiel2k">Exequiel Diaz</a>
+  <li><a href="https://github.com/memaluna">Emanuel Luna</a> *(abandono)*
+  <li><a href="https://github.com/exequiel2k">Exequiel Diaz</a> *(abandono)*
   <li><a href="https://github.com/GiulianaDeEt">Giuliana Dealbera Etchechoury</a></li>
-  <li><a href="https://github.com/juanpisoni">Juan Pisoni</a>
+  <li><a href="https://github.com/juanpisoni">Juan Pisoni</a> *(abandono)*
   <li><a href="https://github.com/LucasJuarez3416">Lucas Juárez</a>
   <li><a href="https://github.com/solefanjbj">Maria Soledad Caro</a>  
-  <li><a href="https://github.com/vittoria06">marina victoria sanchez</a>
+  <li><a href="https://github.com/vittoria06">Marina Victoria Sanchez</a>
   </ul>
   </details>
   
@@ -33,9 +33,22 @@
   <li>Crear Wiki con registro de ceremonias por SPRINT (daily, review,retrospective) y novedades del equipo. ✓</li>
   <li>Completar e incluir la documentación IEEE830 con la nueva parte e-commerce. ✓</li>
   <li>Crear tablero kanban (Product Backlog, ToDo, In process, Finished). ✓</li>
-  <li>Crear diagramas casos de uso</li>
-  <li>Crear diagramas de clase</li>
-  <li>Mejorar el modelo de datos lógico en base a los nuevos requerimientos (e-commerce).</li>
+  <li>Crear diagramas casos de uso. ✓</li>
+  <li>Crear diagramas de clase. ✓</li>
+  <li>Mejorar el modelo de datos lógico en base a los nuevos requerimientos (e-commerce). ✓</li>
   <li>Revisar la estructura web semátntica, responsive (RWD). ✓</li>
+  </ul>
+  
+  <H4>SPRINT 1.</H4>
+  <ul>
+  <li>Mantener actualizado el flujo de las Issues. ✓</li>
+  <li>Crear SPA con módulos, componentes y routin en Angular. </li>
+  <li>Implementar las clases en Python en base al diagrama de clases. </li>
+  <li>Diseñar un script legile de la base de datos en MySQL</li>
+  <li>Corregir, si es necesario, el diagramas casos de uso</li>
+  <li>Corregir, si es necesario, el diagramas de clases</li>
+  <li>Corregir, si es necesario, el diagramas de entidad-relación</li>
+  <li>Corregir, si es necesario, el modelo relacional.</li>
+  <li>Realizar las tablas actualizadas de la normalización.</li>
   </ul>
   </details>
