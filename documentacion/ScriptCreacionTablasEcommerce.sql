@@ -21,29 +21,42 @@ CREATE TABLE IF NOT EXISTS Articulo(
         FOREIGN KEY(idCategoria) REFERENCES Categoria(idCategoria)
         );
 
-CREATE TABLE IF NOT EXISTS Persona(
-        idPersona int(11) NOT NULL AUTO_INCREMENT,
-        tipo_Persona varchar(20),
-        nombre varchar(100),
-        tipo_documento varchar(20),
-        num_documento varchar(20),
-        direccion varchar(50),
-        telefono varchar(20)
-        email varchar(50)
-        PRIMARY KEY (idPersona)
-        );
+-- CREATE TABLE IF NOT EXISTS Persona(
+--         idPersona int(11) NOT NULL AUTO_INCREMENT,
+--         tipo_Persona varchar(20),
+--         nombre varchar(100),
+--         tipo_documento varchar(20),
+--         num_documento varchar(20),
+--         direccion varchar(50),
+--         telefono varchar(20)
+--         email varchar(50)
+--         PRIMARY KEY (idPersona)
+--         );
 
 CREATE TABLE IF NOT EXISTS rol(
-        idRol int(11) NOT NULL AUTO_INCREMENT,
-        nombre Varchar(50),
-        descripcion Varchar(500),
+        idRol integer primary key identity,
+        nombre Varchar(40),
+        descripcion Varchar(100),
         estado tinyint(1),
         PRIMARY KEY (idRol)
         );
         
 CREATE TABLE IF NOT EXISTS Usuario (
         idUsuario int(11) NOT NULL AUTO_INCREMENT,
-        rolId int(11),
+        rolId int(1),
+        nombre varchar(30),
+        apellido varchar(30)
+        email varchar(40),
+        clave varchar(30),
+        telefono varchar(20),
+        -- estado tinyint(1),
+	PRIMARY KEY(idUsuario),
+        FOREIGN KEY (rolId) REFERENCES rol(idRol)
+        );
+
+CREATE TABLE IF NOT EXISTS Cliente (
+        idUsuario int(11) NOT NULL AUTO_INCREMENT,
+        rolId int(1),
         nombre varchar(100),
         email varchar(50),
         clave varchar(50),
