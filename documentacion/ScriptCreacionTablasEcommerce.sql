@@ -40,6 +40,13 @@ CREATE TABLE IF NOT EXISTS rol(
         estado tinyint(1),
         PRIMARY KEY (idRol)
         );
+
+CREATE TABLE IF NOT EXISTS CategoriaTrab(
+        idCategoriaTrab int(11) NOT NULL AUTO_INCREMENT,
+        nombre Varchar(40),
+        descripcion Varchar(100),
+        PRIMARY KEY (idCategoriaTrab)
+        );
         
 CREATE TABLE IF NOT EXISTS Usuario (
         idUsuario int(11) NOT NULL AUTO_INCREMENT,
@@ -55,15 +62,29 @@ CREATE TABLE IF NOT EXISTS Usuario (
         );
 
 CREATE TABLE IF NOT EXISTS Cliente (
-        idUsuario int(11) NOT NULL AUTO_INCREMENT,
+        idCliente int(11) NOT NULL AUTO_INCREMENT,
         rolId int(1),
-        nombre varchar(100),
-        email varchar(50),
-        clave varchar(50),
-        telefono varchar(50),
-        estado tinyint(1),
-	PRIMARY KEY(idUsuario),
-        FOREIGN KEY (rolId) REFERENCES rol(idRol)
+        idUsuario int(11),
+        direccion varchar(100),
+        calificacion int(3),
+        puntosAcum int(10)
+	PRIMARY KEY(idCliente),
+        FOREIGN KEY (rolId) REFERENCES rol(idRol),
+        FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
+        );
+
+CREATE TABLE IF NOT EXISTS Emprendedor (
+        idEmprendedor int(11) NOT NULL AUTO_INCREMENT,
+        rolId int(1),
+        idUsuario int(11),
+        idCategoriaTrab int(10),
+        descripcion varchar(150),
+        redSocial1 varchar(150),
+        redSocial2 varchar(150)
+	PRIMARY KEY(idEmprendedor),
+        FOREIGN KEY (rolId) REFERENCES rol(idRol),
+        FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario),
+        FOREIGN KEY (idCategoriaTrab) REFERENCES CategoriaTrab(idCategoriaTrab)
         );
 
 CREATE TABLE IF NOT EXISTS Ingreso (
