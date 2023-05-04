@@ -5,17 +5,18 @@ CREATE TABLE IF NOT EXISTS Categoria(
         idCategoria int(11) NOT NULL AUTO_INCREMENT,
         nombre Varchar(50),
         descripcion Varchar(500),
-        estado tinyint(1),
+        -- estado tinyint(1),
         PRIMARY KEY (IdCategoria)
         );
 	
 CREATE TABLE IF NOT EXISTS Articulo(
         idArticulo int(11) NOT NULL AUTO_INCREMENT,
         idCategoria int(11),
-        codigo varchar(50),
+        -- codigo varchar(50),
         nombre varchar(100),
+        descripcion varchar(100),
         stock int(11),
-        imagen varchar(20),
+        imagen varchar(100),
         estado tinyint(1),
         PRIMARY KEY (idArticulo), 
         FOREIGN KEY(idCategoria) REFERENCES Categoria(idCategoria)
@@ -87,31 +88,31 @@ CREATE TABLE IF NOT EXISTS Emprendedor (
         FOREIGN KEY (idCategoriaTrab) REFERENCES CategoriaTrab(idCategoriaTrab)
         );
 
-CREATE TABLE IF NOT EXISTS Ingreso (
-        idIngreso int(11) NOT NULL AUTO_INCREMENT,
-        proveedorId int(11),
-        usuarioId int(11),
-        tipo_comprobante varchar(20),
-        serie_comprobante varchar(7),
-        num_comprobate varchar(10),
-        fehca datetime,
-        total int(11),
-        estado tinyint(1),
-	PRIMARY KEY(idIngreso),
-        FOREIGN KEY (proveedorId) REFERENCES Persona(idPersona)
-        FOREIGN KEY (usuarioId) REFERENCES Usuario(idUsuario)
-        );
+-- CREATE TABLE IF NOT EXISTS Ingreso (
+--         idIngreso int(11) NOT NULL AUTO_INCREMENT,
+--         proveedorId int(11),
+--         usuarioId int(11),
+--         tipo_comprobante varchar(20),
+--         serie_comprobante varchar(7),
+--         num_comprobate varchar(10),
+--         fehca datetime,
+--         total int(11),
+--         estado tinyint(1),
+-- 	PRIMARY KEY(idIngreso),
+--         FOREIGN KEY (proveedorId) REFERENCES Persona(idPersona)
+--         FOREIGN KEY (usuarioId) REFERENCES Usuario(idUsuario)
+--         );
 
-CREATE TABLE IF NOT EXISTS Detalle_Ingreso (
-        idDetalleIngreso int(11) NOT NULL AUTO_INCREMENT,
-        ingresoId int(11),
-        articuloId int(11),
-        cantidad int(11),
-        precio int(11),
-	PRIMARY KEY(idDetalleIngreso),
-        FOREIGN KEY (ingresoId) REFERENCES Ingreso(idIngreso)
-        FOREIGN KEY (articuloId) REFERENCES Articulo(idArticulo)
-        );
+-- CREATE TABLE IF NOT EXISTS Detalle_Ingreso (
+--         idDetalleIngreso int(11) NOT NULL AUTO_INCREMENT,
+--         ingresoId int(11),
+--         articuloId int(11),
+--         cantidad int(11),
+--         precio int(11),
+-- 	PRIMARY KEY(idDetalleIngreso),
+--         FOREIGN KEY (ingresoId) REFERENCES Ingreso(idIngreso)
+--         FOREIGN KEY (articuloId) REFERENCES Articulo(idArticulo)
+--         );
 
 CREATE TABLE IF NOT EXISTS Venta (
         idVenta int(11) NOT NULL AUTO_INCREMENT,
@@ -120,7 +121,7 @@ CREATE TABLE IF NOT EXISTS Venta (
         tipo_comprobante varchar(20),
         serie_comprobante varchar(7),
         num_comprobate varchar(10),
-        fehca datetime,
+        fecha datetime,
         impuesto int(11),
         total int(11),
         estado tinyint(1),
