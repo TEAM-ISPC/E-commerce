@@ -1,7 +1,7 @@
 from Emprendedor import *
 
 class Producto():
-    def __init__(self, IdEmprendedor, idProducto, nombreProducto, descripcionProducto,imagenProducto, precioUnitario, categoriaProducto):
+    def __init__(self, IdEmprendedor, idProducto, nombreProducto, descripcionProducto, imagenProducto, precioUnitario, categoriaProducto):
         super().__init__(IdEmprendedor)
         self._idProducto = idProducto
         self._nombreProducto = nombreProducto
@@ -10,6 +10,7 @@ class Producto():
         self._precioUnitario = precioUnitario
         self._categoriaProducto = categoriaProducto
         self._emprendedorId = IdEmprendedor
+        self._cantidad = 1
 
 
     @property
@@ -61,6 +62,18 @@ class Producto():
     def emprendedorId(self, IdEmprendedor):
         self._emprendedorId = IdEmprendedor
 
+    @property
+    def cantidad(self):
+        return self._cantidad
+
+    def aumentarCantidad(self):
+        self._cantidad += 1
+
+    def disminuirCantidad(self):
+        self._cantidad -= 1
+        if self._cantidad < 1:
+            self._cantidad = 1
+
 
     def altaProducto(self, IdEmprendedor, Nombre, Descripcion, Imagen, PrecioUnitario, categoriaProducto):
         if self._emprendedorId == IdEmprendedor:
@@ -94,4 +107,3 @@ class Producto():
             print("Producto eliminado correctamente")
         else:
             raise Exception("No tiene permisos para eliminar este producto")
-
