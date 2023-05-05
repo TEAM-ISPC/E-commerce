@@ -9,17 +9,19 @@ CREATE TABLE IF NOT EXISTS Categoria(
         PRIMARY KEY (IdCategoria)
         );
 	
-CREATE TABLE IF NOT EXISTS Articulo(
-        idArticulo int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS Producto(
+        idProducto int(11) NOT NULL AUTO_INCREMENT,
         idCategoria int(11),
+        idUsuario int(11),
         -- codigo varchar(50),
         nombre varchar(100),
         descripcion varchar(100),
         stock int(11),
-        imagen varchar(100),
-        estado tinyint(1),
-        PRIMARY KEY (idArticulo), 
-        FOREIGN KEY(idCategoria) REFERENCES Categoria(idCategoria)
+        -- imagen varchar(100),
+        -- estado tinyint(1),
+        PRIMARY KEY (idProducto), 
+        FOREIGN KEY (idCategoria) REFERENCES Categoria(idCategoria),
+        FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
         );
 
 -- CREATE TABLE IF NOT EXISTS Persona(
@@ -116,28 +118,27 @@ CREATE TABLE IF NOT EXISTS Emprendedor (
 
 CREATE TABLE IF NOT EXISTS Venta (
         idVenta int(11) NOT NULL AUTO_INCREMENT,
-        clienteId int(11),
-        usuarioId int(11),
+        idEmprendedor int(11),
+        idCliente int(11),
         tipo_comprobante varchar(20),
         serie_comprobante varchar(7),
         num_comprobate varchar(10),
         fecha datetime,
-        impuesto int(11),
         total int(11),
         estado tinyint(1),
 	PRIMARY KEY(idVenta),
-        FOREIGN KEY (clienteId) REFERENCES Ingreso(idPersona)
-        FOREIGN KEY (usuarioId) REFERENCES Articulo(idUsuario)
+        FOREIGN KEY (idEmprendedor) REFERENCES Emprendedor(idEmprendedor),
+        FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente),
         );
 
 CREATE TABLE IF NOT EXISTS Detalle_Venta (
         idDetalleVenta int(11) NOT NULL AUTO_INCREMENT,
-        ventaId int(11),
-        articuloId int(11),
+        idVenta int(11),
+        idProducto int(11),
         cantidad int(11),
         precio int(11),
         descuento int(11),
 	PRIMARY KEY(idDetalleVenta),
-        FOREIGN KEY (ventaId) REFERENCES Ingreso(idVenta)
-        FOREIGN KEY (articuloId) REFERENCES Articulo(idArticulo)
+        FOREIGN KEY (idVenta) REFERENCES Venta(idVenta),
+        FOREIGN KEY (idProducto) REFERENCES Producto(idProducto)
         );
