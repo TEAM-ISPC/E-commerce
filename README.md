@@ -14,10 +14,10 @@
   <summary><H3>Integrantes:</H3></summary>
   <ul>
   <li><a href="https://github.com/agustinrios263">Agustin Rios</a>
-  <li><a href="https://github.com/memaluna">Emanuel Luna</a> *(abandono)*
-  <li><a href="https://github.com/exequiel2k">Exequiel Diaz</a> *(abandono)*
+  <li><a href="https://github.com/memaluna">Emanuel Luna</a> <i>(abandono)</i>
+  <li><a href="https://github.com/exequiel2k">Exequiel Diaz</a> <i>(abandono)</i>
   <li><a href="https://github.com/GiulianaDeEt">Giuliana Dealbera Etchechoury</a></li>
-  <li><a href="https://github.com/juanpisoni">Juan Pisoni</a> *(abandono)*
+  <li><a href="https://github.com/juanpisoni">Juan Pisoni</a> <i>(abandono)</i>
   <li><a href="https://github.com/LucasJuarez3416">Lucas Juárez</a>
   <li><a href="https://github.com/solefanjbj">Maria Soledad Caro</a>  
   <li><a href="https://github.com/vittoria06">Marina Victoria Sanchez</a>
@@ -26,7 +26,7 @@
   
   <details>
   <summary><H3>Etapas realizadas</H3></summary>
-  <H4>SPRINT 0.</H4>
+  <H4><i>SPRINT 0.</i></H4>
   <ul>
   <li>Agregar Issues como Historia de Usuarios, respetando la nomenclatura sugerida. ✓</li>
   <li>Crear Milestone por Sprints. ✓</li>
@@ -39,9 +39,9 @@
   <li>Revisar la estructura web semátntica, responsive (RWD). ✓</li>
   </ul>
   
-  <H4>SPRINT 1.</H4>
+  <H4><i>SPRINT 1.</i></H4>
   <ul>
-  <li>Mantener actualizado el flujo de las Issues. ✓</li>
+  <li>Mantener actualizado el flujo de las Issues. </li>
   <li>Crear SPA con módulos, componentes y routin en Angular. </li>
   <li>Implementar las clases en Python en base al diagrama de clases. </li>
   <li>Diseñar un script legile de la base de datos en MySQL</li>
