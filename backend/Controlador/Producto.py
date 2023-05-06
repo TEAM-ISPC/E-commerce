@@ -1,4 +1,5 @@
 from Emprendedor import *
+from sqlService import *
 
 class Producto():
     def __init__(self, IdEmprendedor, idProducto, nombreProducto, descripcionProducto, imagenProducto, precioUnitario, categoriaProducto):
