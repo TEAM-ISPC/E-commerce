@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.container2{
+    margin-top: 10px;
+    width: 100%;
+    justify-content:space-between;
+    align-items:center;
+    background-color: #ee525a;
+    
+}
+
+.boton{
+    background-color: #ee525a;
+    color: aliceblue;
+}
+
+.boton:hover{
+    background-color: #73E1C3;
+    color: aliceblue;
+}
