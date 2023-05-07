@@ -1,0 +1,54 @@
+
+.container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.container2{
+    margin-top: 10px;
+    width: 100%;
+    justify-content:space-between;
+    align-items:center;
+    background-color: #ee525a;
+    
+}
+
+.boton{
+    background-color: #ee525a;
+    color: aliceblue;
+}
+
+.boton:hover{
+    background-color: #73E1C3;
+    color: aliceblue;
+}
+
+.texto{
+    text-decoration: none;
+}
+
+.logo{
+    display: flex;
+    width: 25%;
+    margin-right: 5px;
+    align-items: center;
+    float: left;
+}
+.t{
+    width: 60%;
+    margin-top: 10px;
+}
+.iconoCliente{
+    display: flex;
+    width: 18%;
+    margin-right: 5px;
+    align-items: center;
+    float: right;
+    
+}
+
+.section{
+    margin: 5px;
+}
+
+
