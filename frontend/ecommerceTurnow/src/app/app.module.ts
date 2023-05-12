@@ -11,6 +11,8 @@ import { FooterComponent } from './component/footer/footer.component';
 import { LoginComponent } from './component/login/login.component';
 import { CarritoComponent } from './component/carrito/carrito.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactoComponent } from './component/contacto/contacto.component';
+import { NosotrosComponent } from './component/nosotros/nosotros.component';
 
 
 const appRoutes: Routes = [
@@ -29,7 +31,9 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    CarritoComponent
+    CarritoComponent,
+    ContactoComponent,
+    NosotrosComponent
      ],
   imports: [
     BrowserModule,
