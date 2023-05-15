@@ -1,0 +1,38 @@
+{
+ 
+ 
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "Turnow",
+      "descripcion": "Sole",
+      "precio": "100",
+      "imagen": ""
+    }
+    
+  ],
+  "Producto01": [
+    {
+      "id": 10,
+      "title": "Belleza",
+      "author": "Turnow",
+      "Descripcion":"Producto belleza1"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+  
+}
