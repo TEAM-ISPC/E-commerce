@@ -21,6 +21,7 @@
   <li><a href="https://github.com/LucasJuarez3416">Lucas Juárez</a>
   <li><a href="https://github.com/solefanjbj">Maria Soledad Caro</a>  
   <li>Marina Victoria Sanchez <i>(se decidió que no continuaría en el proyecto debido a dificultades para adaptarse)</i>
+  <li><a href="https://github.com/deboraaltamira">    Débora Altamira</a>  
   </ul>
   </details>
   
