@@ -10,6 +10,7 @@ LUNA, José Emanuel
 PISONI Juan     
 RÍOS Agustin  
 SÁNCHEZ, Marina Victoria   
+ALTAMIRA, Débora 
 
 ### VIDEO PRESENTACIÓN DE PROYECTO INTEGRADOR:
 https://www.youtube.com/watch?v=d8aP9fcMcgM
