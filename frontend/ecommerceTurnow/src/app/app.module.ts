@@ -13,6 +13,8 @@ import { CarritoComponent } from './component/carrito/carrito.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactoComponent } from './component/contacto/contacto.component';
 import { NosotrosComponent } from './component/nosotros/nosotros.component';
+import {HttpClientModule} from '@angular/common/http';
+
 
 
 const appRoutes: Routes = [
@@ -39,6 +41,7 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
