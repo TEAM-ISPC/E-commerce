@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductoService {
 
-  private Api_back = "http://localhost:3000/Producto01";
+  private Api_back = "http://localhost:3000/";
 
   //producto:Producto[]=[];
   
@@ -22,6 +22,12 @@ export class ProductoService {
   constructor(private http: HttpClient) { }
 
   public getTodosProductos(): Observable<any>{
-    return this.http.get(this.Api_back);
+    return this.http.get(this.Api_back+ "Productos");
   }
+
+  public detalle(id:number): Observable<any>{
+    return this.http.get<any>(this.Api_back + 'Productos/'+ id);
+  }
+
+  
 }

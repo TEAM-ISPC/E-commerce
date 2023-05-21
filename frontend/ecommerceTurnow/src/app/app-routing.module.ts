@@ -8,7 +8,7 @@ import { NosotrosComponent } from './component/nosotros/nosotros.component';
 
 
 const routes: Routes = [
-  { path:'item', component:ItemTiendaComponent },
+  { path:'item/:id', component:ItemTiendaComponent },
   { path:'login', component:LoginComponent },
   { path:'carrito', component:CarritoComponent },//Esto Agregué yo Lucas
   { path:'contacto', component:ContactoComponent},
