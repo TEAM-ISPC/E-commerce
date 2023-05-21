@@ -1,6 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl,  NgForm, Validators } from '@angular/forms';
 import { LoginService } from 'src/app/service/login.service';
 
 @Component({
@@ -10,7 +10,13 @@ import { LoginService } from 'src/app/service/login.service';
 })
 export class LoginComponent  implements OnInit {
 
-  constructor(/*private loginService:LoginService*/) { 
+  correo = new FormControl ('',[Validators.required,Validators.email]);
+  password = new FormControl ('');
+
+
+
+
+  constructor() { 
 
   }
 

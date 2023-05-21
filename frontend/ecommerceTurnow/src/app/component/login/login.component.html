@@ -12,20 +12,28 @@
                 
             <!--aca deberia ir el form que contiene en ngform-->    
             
-            
-                    <div class="form-outline form-white mb-4">
-                      <input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder="Usuario" ngmodel/>
-                      <!--<label class="form-label" for="typeEmailX">Email</label>-->
-                    </div>
-      
-                    <div class="form-outline form-white mb-4">
-                      <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Password" ngmodel/>
-                      <!--<label class="form-label" for="typePasswordX">Password</label>-->
-                    </div>
-      
-                    <p class="small mb-5 pb-lg-2"><a class="text-50" href="#!">Olvidaste tu contraseña?</a></p>
-      
-                    <button class="btn boton btn-outline-light btn-lg px-5" type="submit">Entrar</button>
+                <form>
+
+                  <div class="form-outline form-white mb-4">
+                    <input type="email" [formControl]="correo" id="typeEmailX" class="form-control form-control-lg" placeholder="Correo"/>
+                    <div [hidden]="correo.valid || correo.pristine"><p>Campo requerido</p></div>
+                    <!--<label class="form-label" for="typeEmailX">Email</label>-->
+                  </div>
+                  
+    
+                  <div class="form-outline form-white mb-4">
+                    <input type="password" [formControl]="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Contraseña"/>
+                    <!--<label class="form-label" for="typePasswordX">Password</label>-->
+                  </div>
+    
+                  <p class="small mb-5 pb-lg-2"><a class="text-50" href="#!">Olvidaste tu contraseña?</a></p>
+    
+                  <button class="btn boton btn-outline-light btn-lg px-5" type="submit">Entrar</button>
+
+
+                  
+                </form>
+                    
       
       
                   </div>

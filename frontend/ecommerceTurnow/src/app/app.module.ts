@@ -14,6 +14,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactoComponent } from './component/contacto/contacto.component';
 import { NosotrosComponent } from './component/nosotros/nosotros.component';
 import {HttpClientModule} from '@angular/common/http';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -42,6 +43,8 @@ const appRoutes: Routes = [
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

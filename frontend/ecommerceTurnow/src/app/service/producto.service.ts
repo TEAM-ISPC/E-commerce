@@ -10,14 +10,7 @@ export class ProductoService {
 
   private Api_back = "http://localhost:3000/";
 
-  //producto:Producto[]=[];
-  
 
- /* agregarProductoService(producto:Producto){
-
-    this.producto.push(producto);
-  }
-*/
 
   constructor(private http: HttpClient) { }
 
