@@ -77,7 +77,7 @@ class Producto(models.Model):
     codigodeBarras = models.AutoField(primary_key=True)
     nombreProducto = models.CharField(max_length=100, blank=False)
     descripcionProducto = models.TextField(max_length=1000, blank=False)
-    #imagenProducto = models.ImageField(null=True, upload="#")
+    imagenProducto = models.ImageField(default='Image_Default.jpeg')
     precioUnitario = models.PositiveIntegerField(blank=False) 
     cantidadProducto = models.IntegerField(blank=False, default=0)
     emprendedor_id = models.ForeignKey(Emprendedor, to_field="id_Emprendedor", on_delete=models.CASCADE)
