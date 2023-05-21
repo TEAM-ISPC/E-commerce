@@ -50,5 +50,10 @@
 .section{
     margin: 5px;
 }
+#volver{
+    display: flex;
+    justify-content: center;
+    
+}
 
 
