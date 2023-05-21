@@ -1,0 +1,62 @@
+<app-header></app-header>
+<div class="container py-5">
+    <div class="feature col">
+      <h3 class="fs-2">Comunicate con nosotros</h3>
+  
+      <form class="needs-validation" novalidate>
+        <div>
+          <label for="validationName" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nombre"
+            id="validationNombre"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+  
+          <div class="invalid-feedback"></div>
+        </div>
+  
+        <div>
+          <label for="validationEmail" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="validationEmail"
+            aria-describedby="inputGroupPrepend"
+            placeholder="turnow@gmail.com"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+  
+          <div class="invalid-feedback">Please choose a email.</div>
+        </div>
+  
+        <div>
+          <label for="validationMessage" class="form-label">Mensaje</label>
+          <input
+            type="textarea"
+            class="form-control"
+            id="validationEmail"
+            aria-describedby="inputGroupPrepend"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+  
+          <div class="invalid-feedback">Por favor, ecribe un mensaje.</div>
+        </div>
+        <br />
+        <div class="enviar">
+          <button
+            class="col-2 btn btn-primary bg-danger text-white "
+            type="submit"
+          >
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+ <app-footer></app-footer>
