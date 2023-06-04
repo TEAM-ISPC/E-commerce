@@ -8,4 +8,11 @@ urlpatterns = [
 
     path('auth/logout/',
          LogoutView.as_view(), name='auth_logout'),
+
+     path('auth/registro/',
+         SignupView.as_view(), name='auth_signup'),
+
+     path('user/profile/',
+         ProfileView.as_view(), name='user_profile'),
+     
 ]
