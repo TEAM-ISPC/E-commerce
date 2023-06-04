@@ -1,6 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormControl,  NgForm, Validators } from '@angular/forms';
+import { FormControl,  FormGroup,  NgForm, Validators } from '@angular/forms';
 import { LoginService } from 'src/app/service/login.service';
 
 @Component({
@@ -10,9 +10,21 @@ import { LoginService } from 'src/app/service/login.service';
 })
 export class LoginComponent  implements OnInit {
 
-  correo = new FormControl ('',[Validators.required,Validators.email]);
-  password = new FormControl ('');
+  get correo(){
+    return this.formUser.get('correo') as FormControl;
+  }
 
+  get password(){
+    return this.formUser.get('password') as FormControl;
+  }
+
+  formUser =new FormGroup({
+
+    'correo' : new FormControl ('',[Validators.required,Validators.email]),
+    'password' : new FormControl ('',Validators.required)
+  });
+
+ 
 
 
 

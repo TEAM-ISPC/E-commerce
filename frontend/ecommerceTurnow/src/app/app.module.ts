@@ -15,6 +15,7 @@ import { ContactoComponent } from './component/contacto/contacto.component';
 import { NosotrosComponent } from './component/nosotros/nosotros.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegistroComponent } from './component/registro/registro.component';
 
 
 
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
     LoginComponent,
     CarritoComponent,
     ContactoComponent,
-    NosotrosComponent
+    NosotrosComponent,
+    RegistroComponent
      ],
   imports: [
     BrowserModule,
