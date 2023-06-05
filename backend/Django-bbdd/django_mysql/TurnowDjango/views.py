@@ -11,9 +11,9 @@ from rest_framework import viewsets
 class LoginView(APIView):
     permission_classes = [AllowAny] 
     def post(self, request):
-        email = request.data.get('email', None)
+        correo = request.data.get('correo', None)
         password = request.data.get('password', None)
-        user = authenticate(email=email, password=password)
+        user = authenticate(correo=correo, password=password)
         if user:
             login(request, user)
             return Response(
@@ -49,3 +49,23 @@ class ListarUsuarios(generics.ListCreateAPIView):
         serializer = UserSerializer(queryset, many=True)
         if self.request.user.is_authenticated:
             return Response(serializer.data)
+
+class verProductos(viewsets.ReadOnlyModelViewSet):
+    permission_classes = [AllowAny] 
+    queryset = Producto.objects.all()
+    serializer_class = ProductoSerializer
+
+class verCategorias(viewsets.ReadOnlyModelViewSet):
+    permission_classes = [AllowAny]
+    queryset = Categoria.objects.all()
+    serializer_class = CategoriaSerializer
+
+class agregarProducto(APIView):
+    permission_classes = [IsAdminUser]
+    def post(self, request, format=None):
+        serializer = ProductoSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data,
+                        status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

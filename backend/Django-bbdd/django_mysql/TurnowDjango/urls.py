@@ -14,5 +14,11 @@ urlpatterns = [
 
      path('user/profile/',
          ProfileView.as_view(), name='user_profile'),
+
+     path('usuarios/',
+         ListarUsuarios.as_view(), name='listar_usuarios'),
+
+     path('agregarproducto/',
+         agregarProducto.as_view(), name='agregar_producto'),
      
 ]
