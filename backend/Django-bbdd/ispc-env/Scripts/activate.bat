@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\giuly\OneDrive\Escritorio\ISPC\Segundo Año\00-PROYECTO\E-commerce\backend\Django-bbdd\ispc-env
+set VIRTUAL_ENV=C:\Users\Sole\Documents\ISPC-2023\PROYECTO-FINAL\ecommerceTurnow\E-commerce\backend\Django-bbdd\ispc-env
 
 if not defined PROMPT set PROMPT=$P$G
 

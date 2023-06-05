@@ -8,14 +8,12 @@
               <div class="mb-md-5 mt-md-4 pb-5">
   
                 <h2 class="fw-bold mb-2 text-uppercase"><img src="../../../assets/img/iconoLogotipo.png" class="logoGrande"alt=""></h2>
-                <!--<p class="text-50 mb-5">Please enter your login and password!</p>-->
-                
-            <!--aca deberia ir el form que contiene en ngform-->    
+                 
             
-                <form>
+                <form [formGroup]="formUser">
 
                   <div class="form-outline form-white mb-4">
-                    <input type="email" [formControl]="correo" id="typeEmailX" class="form-control form-control-lg" placeholder="Correo"/>
+                    <input type="email" formControlName="correo" id="typeEmailX" class="form-control form-control-lg" placeholder="Correo"/>
                     <div [hidden]="correo.valid || correo.pristine"><p>Campo requerido</p></div>
                     <!--<label class="form-label" for="typeEmailX">Email</label>-->
                   </div>
@@ -23,12 +21,14 @@
     
                   <div class="form-outline form-white mb-4">
                     <input type="password" [formControl]="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Contraseña"/>
+                    <div [hidden]="password.valid || password.pristine"><p>Campo requerido</p></div>
                     <!--<label class="form-label" for="typePasswordX">Password</label>-->
                   </div>
     
                   <p class="small mb-5 pb-lg-2"><a class="text-50" href="#!">Olvidaste tu contraseña?</a></p>
     
-                  <button class="btn boton btn-outline-light btn-lg px-5" type="submit">Entrar</button>
+                  <button class="btn boton btn-outline-light btn-lg px-5" type="submit" [disabled]="formUser.invalid">Entrar</button>
+                  <a href=""><button class="btn boton btn-outline-light btn-lg px-5" type="button" >Volver</button></a>
 
 
                   
@@ -39,7 +39,7 @@
                   </div>
       
                   <div>
-                    <p class="mb-0">No tenés cuenta aún? <a href="#!" class="text-50 fw-bold">Registrate</a>
+                    <p class="mb-0">No tenés cuenta aún? <a href="registro" class="text-50 fw-bold">Registrate</a>
                     </p>
                   </div>
     
