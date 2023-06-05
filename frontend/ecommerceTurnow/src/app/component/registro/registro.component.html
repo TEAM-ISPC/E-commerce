@@ -1,0 +1,76 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <div class="mb-md-5 mt-md-4 pb-5">
+  
+                <h2 class="fw-bold mb-2 text-uppercase"><img src="../../../assets/img/iconoLogotipo.png" class="logoGrande"alt=""></h2>
+                <!--<p class="text-50 mb-5">Please enter your login and password!</p>-->
+                
+
+                <h2 class="titulo">Formulario de registro</h2>
+            <!--aca deberia ir el form que contiene en ngform-->    
+            
+                <form [formGroup]="formUser">
+
+                    <div class="form-outline form-white mb-4">
+                        <input type="name" formControlName="nombre" id="typeNameX" class="form-control form-control-lg" placeholder="Nombre"/>
+                        <div [hidden]="nombre.valid || nombre.pristine"><p>Campo requerido</p></div>
+                        <!--<label class="form-label" for="typeEmailX">Email</label>-->
+                    </div>
+
+                    <div class="form-outline form-white mb-4">
+                      <input type="name" formControlName="apellido" id="typeNameX" class="form-control form-control-lg" placeholder="Apellido"/>
+                      <div [hidden]="apellido.valid || apellido.pristine"><p>Campo requerido</p></div>
+                      <!--<label class="form-label" for="typeEmailX">Email</label>-->
+                  </div>
+
+                    <div class="form-outline form-white mb-4">
+                        <input type="text" [formControl]="telefono" id="typeTextX" class="form-control form-control-lg" placeholder="Telefono"/>
+                        <div [hidden]="telefono.valid || telefono.pristine"><p>Campo requerido</p></div>
+                        <!--<label class="form-label" for="typeEmailX">Email</label>-->
+                    </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <input type="email" [formControl]="correo" id="typeEmailX" class="form-control form-control-lg" placeholder="Correo"/>
+                    <div [hidden]="correo.valid || correo.pristine"><p>Campo requerido</p></div>
+                    <!--<label class="form-label" for="typeEmailX">Email</label>-->
+                  </div>
+                  
+    
+                  <div class="form-outline form-white mb-4">
+                    <input type="password" [formControl]="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Contraseña"/>
+                    <div [hidden]="password.valid || password.pristine"><p>Mínimo 6 caracteres</p></div>
+                    <!--<label class="form-label" for="typePasswordX">Password</label>-->
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <input type="password" [formControl]="password2" id="typePasswordX" class="form-control form-control-lg" placeholder="Repetir Contraseña"/>
+                    <div [hidden]="password2.value ==password.value"><p>Los Campos no coinciden</p></div>
+                    <!--<label class="form-label" for="typePasswordX">Password</label>-->
+                  </div>
+    
+                      
+                  <button class="btn boton btn-outline-light btn-lg px-5" type="submit">Enviar</button>
+                  <a href="login"><button class="btn boton btn-outline-light btn-lg px-5" type="button" >Cancelar</button></a>
+                  
+
+
+                  
+                </form>
+                    
+      
+      
+                  </div>
+      
+                  
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,63 @@
+.titulo{
+    color: green;
+    font-family:sans-serif;
+}
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #ee525a, rgb(255, 255, 255));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #ee525a, rgb(255, 255, 255))
+    }
+
+
+    
+    .boton{
+        background-color: #ee525a;
+        color: aliceblue;
+    }
+    
+    .boton:hover{
+        background-color: #73E1C3;
+        color: aliceblue;
+    }
+    
+    .texto{
+        text-decoration: none;
+    }
+    
+    .logo{
+        display: flex;
+        width: 25%;
+        margin-right: 5px;
+        align-items: center;
+        float: left;
+    }
+
+    .logoGrande{
+        display: flex;
+        width: 100%;
+        margin-right: 5px;
+        align-items: center;
+        float: left;
+    } 
+
+    .t{
+        width: 60%;
+        margin-top: 10px;
+    }
+    .iconoCliente{
+        display: flex;
+        width: 18%;
+        margin-right: 5px;
+        align-items: center;
+        float: right;
+        
+    }
+    
+    .section{
+        margin: 5px;
+    }

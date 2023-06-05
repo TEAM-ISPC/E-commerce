@@ -1,0 +1,91 @@
+{
+ 
+ 
+ 
+  "Productos": [
+    
+    {
+      "id": 1,
+      "NOMBREPRODUCTO": "Base matte Maybelline",
+      "DESCRIPCIONPRODUCTO":"Base matte Maybelline varios colores",
+      "PRECIOUNITARIO":"5000",
+      "CANTIDADPRODUCTO":"10",
+      "EMPRENDEDORID":"",
+      "IDCATEGORIA":"",
+      "IMAGEN":"../../../assets/img/base-matte-maybelline.jpg"
+    },
+    {
+      "id": 2,
+      "NOMBREPRODUCTO": "Labial Cher velvet matte",
+      "DESCRIPCIONPRODUCTO":"Labial cher velvet matte linea vegana",
+      "PRECIOUNITARIO":"4500",
+      "CANTIDADPRODUCTO":"15",
+      "EMPRENDEDORID":"",
+      "IDCATEGORIA":"",
+      "IMAGEN":"../../../assets/img/cher-velvet-matte.jpg"
+    },
+    {
+      "id": 3,
+      "NOMBREPRODUCTO": "Cuestion color cherry",
+      "DESCRIPCIONPRODUCTO":"Tintura linea vegana color cherry intenso n8",
+      "PRECIOUNITARIO":"2000",
+      "CANTIDADPRODUCTO":"25",
+      "EMPRENDEDORID":"",
+      "IDCATEGORIA":"",
+      "IMAGEN":"../../../assets/img/cuestion-color-cherry.jpg"
+    },
+    {
+      "id": 4,
+      "NOMBREPRODUCTO": "Labial mac velvet antique",
+      "DESCRIPCIONPRODUCTO":"Labial mac velvet antique n5 linea lanzamiento 2023",
+      "PRECIOUNITARIO":"2500",
+      "CANTIDADPRODUCTO":"20",
+      "EMPRENDEDORID":"",
+      "IDCATEGORIA":"",
+      "IMAGEN":"../../../assets/img/labial-mac-velvet-antique.jpg"
+    },
+    {
+      "id": 5,
+      "NOMBREPRODUCTO": "Esmalte uñas Meline",
+      "DESCRIPCIONPRODUCTO":"Esmalte uñas Meline linea intense colors varios tonos",
+      "PRECIOUNITARIO":"1500",
+      "CANTIDADPRODUCTO":"35",
+      "EMPRENDEDORID":"",
+      "IDCATEGORIA":"",
+      "IMAGEN":"../../../assets/img/meline-esmalte.jpg"
+    },
+    {
+      "id": 6,
+      "NOMBREPRODUCTO": "Paleta matte natural colors",
+      "DESCRIPCIONPRODUCTO":"Paleta matte tonos suaves",
+      "PRECIOUNITARIO":"6500",
+      "CANTIDADPRODUCTO":"12",
+      "EMPRENDEDORID":"",
+      "IDCATEGORIA":"",
+      "IMAGEN":"../../../assets/img/paleta.jpg"
+    },
+    {
+      "id": 7,
+      "NOMBREPRODUCTO": "Crema Antifriz",
+      "DESCRIPCIONPRODUCTO":"Tratamiento antifriz extra concentrado fragancia original",
+      "PRECIOUNITARIO":"3000",
+      "CANTIDADPRODUCTO":"20",
+      "EMPRENDEDORID":"",
+      "IDCATEGORIA":"",
+      "IMAGEN":"../../../assets/img/antifriz.jpg"
+    },
+    {
+      "id": 8,
+      "NOMBREPRODUCTO": "Rubor compacto",
+      "DESCRIPCIONPRODUCTO":"Rubor compact matte n3 nude",
+      "PRECIOUNITARIO":"2000",
+      "CANTIDADPRODUCTO":"25",
+      "EMPRENDEDORID":"",
+      "IDCATEGORIA":"",
+      "IMAGEN":"../../../assets/img/rubor.jpg"
+    }
+    
+  ]
+  
+  
+}
