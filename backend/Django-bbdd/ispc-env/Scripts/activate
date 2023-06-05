@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\giuly\OneDrive\Escritorio\ISPC\Segundo Año\00-PROYECTO\E-commerce\backend\Django-bbdd\ispc-env"
+VIRTUAL_ENV="C:\Users\Sole\Documents\ISPC-2023\PROYECTO-FINAL\ecommerceTurnow\E-commerce\backend\Django-bbdd\ispc-env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
