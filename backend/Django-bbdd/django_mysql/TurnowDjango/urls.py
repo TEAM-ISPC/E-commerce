@@ -1,8 +1,8 @@
 from django.urls import path, include
-from .views import LoginView, LogoutView
+from .views import LoginView, LogoutView, SignupView, ProfileView, ListarUsuarios, agregarProducto, verProductos, verCategorias, verProductoDetalle, verCategoriaDetalle
+
 
 urlpatterns = [
-    # Auth views
     path('auth/login/',
          LoginView.as_view(), name='auth_login'),
 
@@ -17,6 +17,18 @@ urlpatterns = [
 
      path('usuarios/',
          ListarUsuarios.as_view(), name='listar_usuarios'),
+    
+     path('productos/',
+         verProductos.as_view(), name='ver_productos'),
+     
+     path('productos/<int:pk>',
+         verProductoDetalle.as_view(), name='ver_productosDetalle'),
+     
+     path('categorias/',
+         verCategorias.as_view(), name='ver_categorias'),
+     
+     path('categorias/<int:pk>',
+         verCategoriaDetalle.as_view(), name='ver_categoriasDetalle'),
 
      path('agregarproducto/',
          agregarProducto.as_view(), name='agregar_producto'),

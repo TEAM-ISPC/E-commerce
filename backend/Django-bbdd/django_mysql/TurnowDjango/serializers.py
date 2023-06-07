@@ -1,9 +1,12 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import make_password
+from .models import Categoria, Producto
 
 
 class UserSerializer(serializers.ModelSerializer):
+    # correo = serializers.EmailField(
+    #     required=True)
     correo = serializers.EmailField(
         required=True)
     nombre = serializers.CharField(
@@ -14,7 +17,6 @@ class UserSerializer(serializers.ModelSerializer):
         min_length=8)
     telefono = serializers.CharField(
         max_length=10)
-
 
 
     class Meta:

@@ -6,6 +6,9 @@ from rest_framework.views import APIView
 from .serializers import UserSerializer
 from rest_framework.permissions import AllowAny, IsAuthenticated, IsAdminUser
 from rest_framework import viewsets
+from .models import Categoria, Producto, CustomUser
+from .serializers import ProductoSerializer
+from .serializers import CategoriaSerializer
 
 
 class LoginView(APIView):
@@ -39,6 +42,7 @@ class ProfileView(generics.RetrieveUpdateAPIView):
     def get_object(self):
         if self.request.user.is_authenticated:
             return self.request.user
+        
 class ListarUsuarios(generics.ListCreateAPIView):
     queryset = CustomUser.objects.all()
     serializer_class = UserSerializer
@@ -50,12 +54,22 @@ class ListarUsuarios(generics.ListCreateAPIView):
         if self.request.user.is_authenticated:
             return Response(serializer.data)
 
-class verProductos(viewsets.ReadOnlyModelViewSet):
+class verProductos(generics.ListCreateAPIView):
+    permission_classes = [AllowAny] 
+    queryset = Producto.objects.all()
+    serializer_class = ProductoSerializer
+    
+class verProductoDetalle(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [AllowAny] 
     queryset = Producto.objects.all()
     serializer_class = ProductoSerializer
 
-class verCategorias(viewsets.ReadOnlyModelViewSet):
+class verCategorias(generics.ListCreateAPIView):
+    permission_classes = [AllowAny]
+    queryset = Categoria.objects.all()
+    serializer_class = CategoriaSerializer
+
+class verCategoriaDetalle(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [AllowAny]
     queryset = Categoria.objects.all()
     serializer_class = CategoriaSerializer
