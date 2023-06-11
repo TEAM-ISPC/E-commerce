@@ -21,9 +21,9 @@ export class LoginService {
     private tokenService: TokenService
   ) { }
 
-  login(email: string, password: string) {
+  login(correo: string, password: string) {
     return this.http.post<Token>(`${this.apiUrl}login`, {
-      email,
+      correo,
       password
     })
       .pipe(
