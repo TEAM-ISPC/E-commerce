@@ -18,9 +18,10 @@ export class TiendaComponent implements OnInit {
   ngOnInit(): void {
     this.miProducto.getTodosProductos().subscribe(resp =>{
       this.producto = resp;
-      console.log(this.producto);
+     
       
     })
+    
   }
 
   

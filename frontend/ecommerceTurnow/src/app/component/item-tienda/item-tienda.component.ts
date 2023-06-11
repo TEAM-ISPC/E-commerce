@@ -15,6 +15,7 @@ export class ItemTiendaComponent implements OnInit{
   
   ngOnInit(): void {
     let id = this.activatedRouter.snapshot.params['id'];
+    console.log("id "+id)
     this.misItems.detalle(id).subscribe(
       data => {
         this.items = data;
