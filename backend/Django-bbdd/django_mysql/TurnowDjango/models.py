@@ -96,7 +96,7 @@ class Producto(models.Model):
     imagenProducto = models.ImageField(default='Image_Default.jpeg')
     precioUnitario = models.PositiveIntegerField(blank=False) 
     cantidadProducto = models.IntegerField(blank=False, default=0)
-    emprendedor_id = models.ForeignKey(Emprendedor, to_field="id_Emprendedor", on_delete=models.CASCADE)
+    # emprendedor_id = models.ForeignKey(Emprendedor, to_field="id_Emprendedor", on_delete=models.CASCADE)
     id_Categoria = models.ForeignKey(Categoria, to_field="id_Categoria", on_delete=models.CASCADE)
     class Meta:
         db_table = "Producto"
