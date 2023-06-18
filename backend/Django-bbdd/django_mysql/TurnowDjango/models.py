@@ -102,3 +102,8 @@ class Rol(models.Model):
     nombreRol = models.CharField(max_length=15)
     tipoRol = models.IntegerField(default=0)
 """
+
+class CarritoCompras(models.Model):
+        producto_nombre = models.CharField(max_length=200)
+        producto_precio = models.DecimalField(max_length=10, blank=False, decimal_places=2, max_digits=10)
+        producto_cantidad = models.PositiveIntegerField()
