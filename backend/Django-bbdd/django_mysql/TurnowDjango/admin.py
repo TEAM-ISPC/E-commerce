@@ -18,7 +18,7 @@ class ClienteAdmin(admin.ModelAdmin):
     list_display =("id_Cliente","usuario_id")
 
 class ProductoAdmin(admin.ModelAdmin):
-    list_display =("nombreProducto","descripcionProducto","precioUnitario","cantidadProducto","codigodeBarras","imagenProducto","emprendedor_id","id_Categoria")
+    list_display =("nombreProducto","descripcionProducto","precioUnitario","cantidadProducto","codigodeBarras","imagenProducto","id_Categoria")
 
 class CategoriaAdmin(admin.ModelAdmin):
     list_display =("nombreCategoria", "descripcionCategoria")

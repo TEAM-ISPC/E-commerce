@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.contrib.auth import authenticate, login, logout
 from rest_framework import status, generics
 from rest_framework.response import Response
@@ -9,7 +9,8 @@ from rest_framework import viewsets
 from .models import Categoria, Producto, CustomUser
 from .serializers import ProductoSerializer
 from .serializers import CategoriaSerializer
-
+import mercadopago
+import json
 
 class LoginView(APIView):
     permission_classes = [AllowAny] 
@@ -82,4 +83,56 @@ class agregarProducto(APIView):
             serializer.save()
             return Response(serializer.data,
                         status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class ProcessPaymentAPIView(APIView):
+    def post(self, request):
+        try:
+            request_values = json.loads(request.body)
+            payment_data = {
+                "transaction_amount": float(request_values["transaction_amount"]),
+                "token": request_values["token"],
+                "installments": int(request_values["installments"]),
+                "payment_method_id": request_values["payment_method_id"],
+                "issuer_id": request_values["issuer_id"],
+                "payer": {
+                    "email": request_values["payer"]["email"],
+                    "identification": {
+                        "type": request_values["payer"]["identification"]["type"],
+                        "number": request_values["payer"]["identification"]["number"],
+                    },
+                },
+            }
+
+            sdk = mercadopago.SDK("")
+
+            payment_response = sdk.payment().create(payment_data)
+
+            payment = payment_response["response"]
+            status = {
+                "id": payment["id"],
+                "status": payment["status"],
+                "status_detail": payment["status_detail"],
+            }
+
+            return Response(data={"body": status, "statusCode": payment_response["status"]}, status=201)
+        except Exception as e:
+            return Response(data={"body": payment_response}, status=400)
+        
+class retornarPagado(APIView):  
+    def get(self, request):
+        return Response({"respuesta": "aprobado"})
+
+class customjsonybajarstock(APIView):
+    permission_classes = [IsAdminUser] 
+    def patch(self, request, pk, cantidad):
+        model = get_object_or_404(Producto, pk=pk) #
+        data = {"cantidadProducto": model.cantidadProducto - int(cantidad)}
+        serializer = ProductoSerializer(model, data=data, partial=True)
+
+        if serializer.is_valid():
+            serializer.save() 
+            agregarcustomjson={"respuesta": "aprobado"}
+            agregarcustomjson.update(serializer.data) 
+            return Response(agregarcustomjson)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
