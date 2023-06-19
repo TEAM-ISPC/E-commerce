@@ -4,6 +4,7 @@ from .models import Emprendedor
 from .models import Cliente
 from .models import Categoria
 from .models import Producto
+from .models import CarritoCompras
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 
@@ -18,10 +19,13 @@ class ClienteAdmin(admin.ModelAdmin):
     list_display =("id_Cliente","usuario_id")
 
 class ProductoAdmin(admin.ModelAdmin):
-    list_display =("nombreProducto","descripcionProducto","precioUnitario","cantidadProducto","codigodeBarras","imagenProducto","id_Categoria")
+    list_display =("nombreProducto","descripcionProducto","precioUnitario","cantidadProducto","codigodeBarras","imagenProducto", "id_Categoria")
 
 class CategoriaAdmin(admin.ModelAdmin):
     list_display =("nombreCategoria", "descripcionCategoria")
+    
+# class CarritoCompras(admin.ModelAdmin):
+#     list_display = ['id','estado']
 
 @admin.register(get_user_model())
 class CustomUserAdmin(UserAdmin):
@@ -32,3 +36,4 @@ admin.site.register(Emprendedor,EmprendedorAdmin)
 admin.site.register(Cliente,ClienteAdmin)
 admin.site.register(Producto,ProductoAdmin)
 admin.site.register(Categoria,CategoriaAdmin)
+admin.site.register(CarritoCompras)

@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import make_password
-from .models import Categoria, Producto
+from .models import Categoria, Producto, CarritoCompras
 from django.db import models
 
 
@@ -35,3 +35,12 @@ class ProductoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Producto
         fields = '__all__'
+
+class CarritoCompraSerializer(serializers.ModelSerializer):
+    producto_nombre = serializers.CharField(max_length=200)
+    producto_precio = serializers.FloatField()
+    producto_cantidad = serializers.IntegerField(required=False, default=1)
+
+    class Meta:
+        model = CarritoCompras
+        fields = ('__all__')

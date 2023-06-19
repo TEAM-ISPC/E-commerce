@@ -1,5 +1,5 @@
-from django.shortcuts import get_object_or_404, render
 from django.contrib.auth import authenticate, login, logout
+from django.shortcuts import get_object_or_404, render
 from rest_framework import status, generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -9,8 +9,10 @@ from rest_framework import viewsets
 from .models import Categoria, Producto, CustomUser
 from .serializers import ProductoSerializer
 from .serializers import CategoriaSerializer
-#import mercadopago
-#import json
+from .serializers import CarritoCompraSerializer
+# import mercadopago
+# import json
+
 
 class LoginView(APIView):
     permission_classes = [AllowAny] 
@@ -48,7 +50,7 @@ class ListarUsuarios(generics.ListCreateAPIView):
     queryset = CustomUser.objects.all()
     serializer_class = UserSerializer
     http_method_names = ['get']
-    permission_classes = [IsAdminUser]
+    permission_classes = [AllowAny]
     def list(self, request):
         queryset = self.get_queryset()
         serializer = UserSerializer(queryset, many=True)
@@ -76,7 +78,7 @@ class verCategoriaDetalle(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CategoriaSerializer
 
 class agregarProducto(APIView):
-    permission_classes = [IsAdminUser]
+    permission_classes = [AllowAny]
     def post(self, request, format=None):
         serializer = ProductoSerializer(data=request.data)
         if serializer.is_valid():
@@ -124,7 +126,7 @@ class retornarPagado(APIView):
         return Response({"respuesta": "aprobado"})
 
 class customjsonybajarstock(APIView):
-    permission_classes = [IsAdminUser] 
+    permission_classes = [AllowAny] 
     def patch(self, request, pk, cantidad):
         model = get_object_or_404(Producto, pk=pk) #
         data = {"cantidadProducto": model.cantidadProducto - int(cantidad)}
@@ -136,3 +138,13 @@ class customjsonybajarstock(APIView):
             agregarcustomjson.update(serializer.data) 
             return Response(agregarcustomjson)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+class CarritoComprasVista(APIView):
+    permission_classes = [AllowAny]
+    def post(self, request):
+        serializer = CarritoCompraSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"estado": "correcto", "data": serializer.data}, status=status.HTTP_200_OK)
+        else:
+            return Response({"estado": "error", "data": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
