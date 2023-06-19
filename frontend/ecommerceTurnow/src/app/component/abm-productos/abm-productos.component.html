@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+
+
+
+    <div class="row">
+        <form  (ngSubmit) = "modificar()" noValidate #f="ngForm" action="">
+            <label for="">Codigo de Barras</label>
+            <input type="text" id="codigodeBarras" name="codigodeBarras" [(ngModel)]="producto.codigodeBarras"  >
+            <label for="">Nombre</label>
+            <input type="text" id="nombreProducto" name="nombreProducto" [(ngModel)]="producto.nombreProducto"  >
+            <label for="">Precio</label>
+            <input type="text" id="precioUnitario" name="precioUnitario" [(ngModel)]="producto.precioUnitario" >
+            <label for="">Descripción</label>
+            <input type="text" id="descripcionProducto" name="descripcionProducto" [(ngModel)]="producto.descripcionProducto"  >
+            <label for="">Cantidad</label>
+            <input type="image" id="cantidadProducto" name="cantidadProducto" [(ngModel)]="producto.cantidadProducto"  >
+            <label for="">Imagen</label>
+            <input type="text" id="imagenProducto" name="imagenProducto" [(ngModel)]="producto.imagenProducto"  >
+            <button class="btn btn-dark" *ngIf="isLogged" type="submit"> <i class="bi bi-pencil-fill" ></i>Guardar</button> 
+            <button class="btn btn-dark" *ngIf="isLogged" (click)= 'eliminar(producto.codigodeBarras)'><i class="bi bi-trash" ></i>eliminar</button>
+
+        </form>
+
+
+   
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+<app-footer></app-footer>

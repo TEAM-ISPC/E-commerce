@@ -9,8 +9,8 @@ from rest_framework import viewsets
 from .models import Categoria, Producto, CustomUser
 from .serializers import ProductoSerializer
 from .serializers import CategoriaSerializer
-import mercadopago
-import json
+#import mercadopago
+#import json
 
 class LoginView(APIView):
     permission_classes = [AllowAny] 
