@@ -27,5 +27,15 @@ export class ProductoService {
     return this.http.post('api/productos/', productData);
   }
 
+  public save(producto:Producto): Observable<any>{
+    return this.http.post<any>(`api/productos/`,producto);
+  }
+  public update(cod: number,producto:Producto ): Observable<any>{
+    return this.http.post<any>(`api/agregarproductos/${cod}`,producto);
+  }
+  public borrar(cod: number): Observable<any>{
+    return this.http.delete<any>(`api/productos/${cod}`);
+  }
+
   
 }

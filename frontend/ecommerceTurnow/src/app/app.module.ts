@@ -17,6 +17,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistroComponent } from './component/registro/registro.component';
 import { PublicarProductoComponent } from './component/publicar-producto/publicar-producto.component';
+import { AbmProductosComponent } from './component/abm-productos/abm-productos.component';
 
 
 
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
     ContactoComponent,
     NosotrosComponent,
     RegistroComponent,
-    PublicarProductoComponent
+    PublicarProductoComponent,
+    AbmProductosComponent
      ],
   imports: [
     BrowserModule,

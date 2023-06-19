@@ -7,6 +7,7 @@ import { CarritoComponent } from './component/carrito/carrito.component';//Esto 
 import { ContactoComponent } from './component/contacto/contacto.component';
 import { NosotrosComponent } from './component/nosotros/nosotros.component';
 import { RegistroComponent } from './component/registro/registro.component';
+import { AbmProductosComponent } from './component/abm-productos/abm-productos.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,9 @@ const routes: Routes = [
   { path:'nosotros', component:NosotrosComponent},
   { path:'registro', component:RegistroComponent},
   { path:'publicar-producto', component:PublicarProductoComponent},
-  
+  { path:'modificar-producto', component:AbmProductosComponent},
+  { path:'modificar-producto/:id', component:AbmProductosComponent},
+
 ];
 
 @NgModule({

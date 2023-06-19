@@ -9,6 +9,7 @@ import { ProductoService } from 'src/app/service/producto.service';
 export class TiendaComponent implements OnInit {
 
   producto: any={};
+  isLogged: boolean=true;
 
   constructor(private miProducto:ProductoService){
     
@@ -22,6 +23,12 @@ export class TiendaComponent implements OnInit {
       
     })
     
+  }
+  eliminar(codigodeBarras: number){
+    this.miProducto.borrar(codigodeBarras).subscribe(
+      data =>{this.producto()}
+    )
+
   }
 
   
