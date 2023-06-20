@@ -8,7 +8,7 @@
         </div>
     </div>
 </header>
-<a href="modificar-producto"><button type="button" class="btn btn-light editar" >Agregar Producto</button></a>
+<!-- <a href="modificar-producto"><button type="button" class="btn btn-light editar" >Agregar Producto</button></a> -->
 
  <!-- Section-->
  <section class="py-5">
@@ -36,8 +36,8 @@
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/item/{{prod.codigodeBarras}}">Detalle</a></div>
-                        <button class="btn btn-dark" *ngIf="isLogged" routerLink="/modificar-producto/{{prod.codigodeBarras}}"> <i class="bi bi-pencil-fill" ></i>modificar</button>
-                        <button class="btn btn-dark" *ngIf="isLogged" (click)= 'eliminar(prod.codigodeBarras)'><i class="bi bi-trash" ></i>eliminar</button>
+                        <!-- <button class="btn btn-dark" *ngIf="isLogged" routerLink="/modificar-producto/{{prod.codigodeBarras}}"> <i class="bi bi-pencil-fill" ></i>modificar</button> -->
+                        <!-- <button class="btn btn-dark" *ngIf="isLogged" (click)= 'eliminar(prod.codigodeBarras)'><i class="bi bi-trash" ></i>eliminar</button> -->
                         <p class="mt-4 blockquote-footer">ID Producto: {{prod.codigodeBarras}}</p>
                     </div>
                 </div>
