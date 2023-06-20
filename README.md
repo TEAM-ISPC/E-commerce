@@ -10,7 +10,7 @@
   habilidades adquiridos en el instituto en un contexto real.
 </p>
 
-  <a href = "https://drive.google.com/drive/folders/1hKpAot0eIbenEPAJK0tKE-QfhRHYhih7?usp=sharing"><h3>DEMO FINAL</h3></a>
+ <h3 align="center"><a href = "https://drive.google.com/drive/folders/1hKpAot0eIbenEPAJK0tKE-QfhRHYhih7?usp=sharing">DEMO FINAL</a></h3>
 
   <details> 
   <summary><H3>Integrantes:</H3></summary>
