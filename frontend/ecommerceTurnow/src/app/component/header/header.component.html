@@ -1,14 +1,15 @@
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-white bg-white">
+        <nav class="navbar navbar-expand-lg navbar-white bg-white espaciado">
             <div class="container px-4 px-lg-2">
                 <!--la siguiente linea no tienen el icono-->
-                <img src="../../../assets/img/iconoLogotipo.png" class="logo">
+                <div><img src="../../../assets/img/iconoLogotipo.png" class="logo">
                 <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>-->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li><a href="/login"><button type="button"  class="btn btn-outline-dark" >Acceder</button></a> </li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
-                        <li class="nav-item dropdown">
+                </div>
+                <div class="collapse navbar-collapse mt-3" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-1 mb-2 mb-lg-0 ms-lg-4">
+                        <li class="me-auto mt-1 p-1"><a href="/login"><button type="button"  class="btn btn-outline-dark" >Acceder</button></a> </li>
+                        <li class="nav-item me-1 mt-1 p-1"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+                        <li class="nav-item dropdown me-auto mt-1 p-1">
                             <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button">
                                 Filtrar
                             </a>
@@ -20,11 +21,11 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/contacto">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/nosotros">Nosotros</a></li>
-                        <li class="nav-item ">
-                                <a href="/carrito">
-                                <button class="btn btn-outline-dark " type="submit">
+                        <li class="nav-item me-1 mt-1 p-1"><a class="nav-link active" aria-current="page" href="/contacto">Contacto</a></li>
+                        <li class="nav-item me-1 mt-1 p-1"><a class="nav-link active" aria-current="page" href="/nosotros">Nosotros</a></li>
+                        <li class="nav-item me-1 mt-1 p-1">
+                                <a class=" text-decoration-none" href="/carrito">
+                                <button class=" d-flex btn btn-outline-dark " type="submit">
                                     <i class="bi-cart-fill me-1"></i>
                                     Carrito
                                 </button>
