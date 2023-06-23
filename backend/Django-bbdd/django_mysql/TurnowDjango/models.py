@@ -6,7 +6,16 @@ from django.contrib.auth.models import AbstractUser
 class CustomUser(AbstractUser):
     correo = models.EmailField(
         max_length=150, unique=True)
+    nombre = models.CharField(
+        max_length=50)
+    apellido = models.CharField(
+        max_length=50)
+    telefono = models.CharField(
+        max_length=10)
     USERNAME_FIELD = 'correo'
+    NOMBRE_FIELD = 'nombre'
+    APELLIDO_FIELD = 'apellido'
+    TELEFONO_FIELD = 'telefono'
     REQUIRED_FIELDS = ['username', 'password']
 
 class Usuario(models.Model):
@@ -87,7 +96,7 @@ class Producto(models.Model):
     imagenProducto = models.ImageField(default='Image_Default.jpeg')
     precioUnitario = models.PositiveIntegerField(blank=False) 
     cantidadProducto = models.IntegerField(blank=False, default=0)
-    emprendedor_id = models.ForeignKey(Emprendedor, to_field="id_Emprendedor", on_delete=models.CASCADE)
+    # emprendedor_id = models.ForeignKey(Emprendedor, to_field="id_Emprendedor", on_delete=models.CASCADE)
     id_Categoria = models.ForeignKey(Categoria, to_field="id_Categoria", on_delete=models.CASCADE)
     class Meta:
         db_table = "Producto"
@@ -102,3 +111,26 @@ class Rol(models.Model):
     nombreRol = models.CharField(max_length=15)
     tipoRol = models.IntegerField(default=0)
 """
+class CarritoCompras(models.Model):
+        producto_nombre = models.CharField(max_length=200)
+        producto_precio = models.DecimalField(max_length=10, blank=False, decimal_places=2, max_digits=10)
+        producto_cantidad = models.PositiveIntegerField()
+        pagos= [
+        ("Pagado", "Pagado"),
+        ("Pendiente", "Pendiente"),
+        ("Rechazado", "Rechazado"),
+    ]
+        pago = models.CharField(max_length=80, choices=pagos, default="Pendiente")
+
+        producto = models.ManyToManyField(
+        Producto,
+        related_name= "carrito_producto"
+    )
+        def __unicode__(self):
+            return self.fecha_Hora
+        def __str__(self):
+            return str(self.pk)
+        class Meta:
+            db_table = 'carrito'
+            verbose_name = 'Carrito'
+            verbose_name_plural = 'Carritos'
