@@ -15,15 +15,15 @@
   <details> 
   <summary><H3>Integrantes:</H3></summary>
   <ul>
-  <li><a href="https://github.com/solefanjbj">Maria Soledad Caro</a>  
-  <li><a href="https://github.com/agustinrios263">Agustin Rios</a>
+  <li><a href="https://github.com/solefanjbj">Maria Soledad Caro</a></li>
+  <li><a href="https://github.com/agustinrios263">Agustin Rios</a></li>
   <li><a href="https://github.com/GiulianaDeEt">Giuliana Dealbera Etchechoury</a></li>
-  <li><a href="https://github.com/deboraaltamira">Débora Altamira</a> <i>(decidió no continuar)</i> 
-  <li><a href="https://github.com/memaluna">Emanuel Luna</a> <i>(no continuó por motivos personales)</i>
-  <li><a href="https://github.com/exequiel2k">Exequiel Diaz</a> <i>(no continuó por motivos personales)</i>
-  <li><a href="https://github.com/juanpisoni">Juan Pisoni</a> <i>(decidió no continuar)</i>
-  <li><a href="https://github.com/LucasJuarez3416">Lucas Juárez </a><i>(no continuó por motivos personales)
-  <li>Marina Victoria Sanchez <i>(se decidió que no continuaría en el proyecto debido a dificultades para adaptarse)</i>
+  <li><a href="https://github.com/deboraaltamira">Débora Altamira</a> <i>(decidió no continuar)</i></li>
+  <li><a href="https://github.com/memaluna">Emanuel Luna</a> <i>(no continuó por motivos personales)</i></li>
+  <li><a href="https://github.com/exequiel2k">Exequiel Diaz</a> <i>(no continuó por motivos personales)</i></li>
+  <li><a href="https://github.com/juanpisoni">Juan Pisoni</a> <i>(decidió no continuar)</i></li>
+  <li><a href="https://github.com/LucasJuarez3416">Lucas Juárez </a><i>(no continuó por motivos personales)</li>
+  <li>Marina Victoria Sanchez <i>(se decidió que no continuaría en el proyecto debido a dificultades para adaptarse)</i></li>
   </ul>
   </details>
   
@@ -39,7 +39,7 @@
   <li>Crear diagramas casos de uso. </li>
   <li>Crear diagramas de clase. </li>
   <li>Mejorar el modelo de datos lógico en base a los nuevos requerimientos (e-commerce). </li>
-  <li>Revisar la estructura web semátntica, responsive (RWD). </li>
+  <li>Revisar la estructura web semántica, responsive (RWD). </li>
   </ul>
   
   <H4><i>SPRINT 1.</i></H4>
@@ -48,9 +48,9 @@
   <li>Crear SPA con módulos, componentes y routin en Angular. </li>
   <li>Implementar las clases en Python en base al diagrama de clases. </li>
   <li>Diseñar un script legile de la base de datos en MySQL</li>
-  <li>Corregir, si es necesario, el diagramas casos de uso</li>
-  <li>Corregir, si es necesario, el diagramas de clases</li>
-  <li>Corregir, si es necesario, el diagramas de entidad-relación</li>
+  <li>Corregir, si es necesario, el diagrama casos de uso</li>
+  <li>Corregir, si es necesario, el diagramasde clases</li>
+  <li>Corregir, si es necesario, el diagrama de entidad-relación</li>
   <li>Corregir, si es necesario, el modelo relacional.</li>
   <li>Realizar las tablas actualizadas de la normalización.</li>
   </ul>
@@ -82,7 +82,7 @@
     <ul>
       <li>Mostrar catálogo con mínimo 3 productos</li>
       <li>Seleccionar para comprar</li>
-      <li>Simular pagon con API Mercado Pago</li>
+      <li>Simular pago con API Mercado Pago</li>
     </ul>
   <li>Crear un tablero de control administrador CRUD básico funcional de producto y cliente. </li>
   <li>Demo final. </li>    
